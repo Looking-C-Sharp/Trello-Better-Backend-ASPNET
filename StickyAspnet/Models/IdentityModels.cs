@@ -10,7 +10,14 @@ namespace StickyAspnet.Models
     // You can add profile data for the user by adding more properties to your ApplicationUser class, please visit https://go.microsoft.com/fwlink/?LinkID=317594 to learn more.
     public class ApplicationUser : IdentityUser
     {
-        public string FullName;
+        /// <summary>
+        /// The user's email address for locating a Gravatar image.
+        /// </summary>
+        public string Avatar { get; set; }
+        /// <summary>
+        /// The user's legal (or illegal name).
+        /// </summary>
+        public string FullName { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
