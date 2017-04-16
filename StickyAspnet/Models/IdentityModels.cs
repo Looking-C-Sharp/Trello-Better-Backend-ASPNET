@@ -13,7 +13,10 @@ namespace StickyAspnet.Models
         /// <summary>
         /// The user's email address for locating a Gravatar image.
         /// </summary>
-        public string Avatar { get; set; }
+        public string Avatar {
+            get { return Email; }
+            set { Email = value; }
+        }
         /// <summary>
         /// The user's legal (or illegal name).
         /// </summary>
