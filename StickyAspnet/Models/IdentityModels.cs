@@ -36,7 +36,12 @@ namespace StickyAspnet.Models
         }
 
         public DbSet<Group> Groups { get; set; }
-        
+        public DbSet<List> Lists { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<Project> Projects { get; set; }
+
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
