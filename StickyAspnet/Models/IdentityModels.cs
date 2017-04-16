@@ -17,10 +17,6 @@ namespace StickyAspnet.Models
             get { return Email; }
             set { Email = value; }
         }
-        /// <summary>
-        /// The user's legal (or illegal name).
-        /// </summary>
-        public string FullName { get; set; }
 
         public async Task<ClaimsIdentity> GenerateUserIdentityAsync(UserManager<ApplicationUser> manager, string authenticationType)
         {
